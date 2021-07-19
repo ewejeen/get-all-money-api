@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 	
+	@GetMapping("/")
+	public String index() {
+		return "Hello World!";
+	}
+
 	@GetMapping("/hello")
 	public String hello() {
 		return "현재 서버시간: " + new Date() ;
